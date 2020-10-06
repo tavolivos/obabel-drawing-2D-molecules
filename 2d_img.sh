@@ -7,7 +7,7 @@ smiles=(
 	"C1CCC(C(C1)CN2CCN(CC2)C3=NSC4=CC=CC=C43)CN5C(=O)C6C7CCC(C7)C6C5=O"
 	"CC#CC(=O)N1CCCC1C2=NC(=C3N2C=CN=C3N)C4=CC=C(C=C4)C(=O)NC5=CC=CC=N5"
 )
-#loop for draw
+#loop to draw
 for i in "${smiles[@]}"; do
 	mkdir $i
 	obabel -:"$i" -O "$i"/"$i".svg -xm -xd -xC -xb none -xt
